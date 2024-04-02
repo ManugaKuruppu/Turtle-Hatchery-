@@ -1,0 +1,222 @@
+<html>
+  <head>
+    <meta name="viewport" content="device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turtle Hatcheries In Sri Lanka</title>
+    <link rel="stylesheet" href="payment.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ee8e74c256.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="website.html"><img src="Images/pngwing.com.png" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="homePage.html">Home</a></li>
+              <li><a href="hikkaduwa.html">Hikkaduwa Turtle Hatchery</a></li>
+              <li><a href="tickets.html">Tickets</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <title>Payment Portal</title>
+  <style>
+    .payment-form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .card-images img {
+      width: 30px;
+      height: 20px;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+<div class="portal">
+  <h2>Payment Details</h2>
+</div>
+  <form class="payment-form">
+    <div class="card-images">
+      <center>
+        <img src="Images/visa.jpg" alt="Visa">
+        <img src="Images/mastercard.jpg" alt="MasterCard">
+        <img src="Images/amex.jpg" alt="American Express">
+        <img src="Images/discover.jpg" alt="Discover">
+      </div>
+    </center>
+    <label for="cardNumber">Card Number:</label>
+    <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]{13,16}" title="Please enter a valid card number (13-16 digits)" required>
+    <br>
+
+    
+    <br>
+
+    <label for="expiryDate">Expiry Date:</label>
+    <input type="text" id="expiryDate" name="expiryDate" pattern="(0[1-9]|1[0-2])\/[0-9]{2}" title="Please enter a valid expiry date (MM/YY)" required>
+    
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" pattern="[0-9]{3,4}" title="Please enter a valid CVV (3-4 digits)" required>
+    <br>
+
+    <label for="cardName">Cardholder Name:</label>
+    <input type="text" id="cardName" name="cardName" pattern="[A-Za-z\s]+" title="Please enter a valid cardholder name" required>
+    <br>
+
+    <button type="submit">Pay Now</button>
+  </form>
+    </section>
+    <section class="back2">
+      <!-------------------------Summary Table------------------------->
+
+<div class="summary">
+  <h1>Summary Table</h1>
+  <table border="1">
+      <tr>
+          <th>Field</th>
+          <th>User Details</th>
+      </tr>
+      <tr>
+          <td>Date of Arrival</td>
+          <td id="arriving_date_value"></td>
+      </tr>
+      <tr>
+          <td>Time Duration Reserved</td>
+          <td id="stay_duration_value"></td>
+      </tr>
+      <tr>
+          <td>Time Slots Reserved</td>
+          <td id="time_slots_value"></td>
+      </tr>
+      <tr>
+          <td>Sri Lankan Adults</td>
+          <td id="sl_adults_value"></td>
+      </tr>
+      <tr>
+          <td>Sri Lankan Children</td>
+          <td id="sl_child_value"></td>
+      </tr>
+      <tr>
+          <td>Foreigner Adults</td>
+          <td id="fr_adults_value"></td>
+      </tr>
+      <tr>
+          <td>Foreigner Children</td>
+          <td id="fr_child_value"></td>
+      </tr>
+      <tr>
+          <td>Infants</td>
+          <td id="infant_value"></td>
+      </tr>
+      <tr>
+          <td>Total Price</td>
+          <td id="total_price_value"></td>
+      </tr>
+  </table>
+  <a href="confirmation.html"><button type="button"  value="Continue with Purchase">
+    Pay Now
+</button></a>
+
+    </section>
+
+    <script>
+      // Retrieve data from local storage and display in the table
+      document.getElementById("arriving_date_value").textContent = localStorage.getItem("arrivingDate");
+      document.getElementById("stay_duration_value").textContent = localStorage.getItem("stayDuration");
+      document.getElementById("time_slots_value").textContent = JSON.parse(localStorage.getItem("timeSlotArray")).join(", ");
+      document.getElementById("sl_adults_value").textContent = localStorage.getItem("SL Adults");
+      document.getElementById("sl_child_value").textContent = localStorage.getItem("SL Child");
+      document.getElementById("fr_adults_value").textContent = localStorage.getItem("Foreigner Adult");
+      document.getElementById("fr_child_value").textContent = localStorage.getItem("Foreigner Child");
+      document.getElementById("infant_value").textContent = localStorage.getItem("Infant");
+  
+      // Display the total price from local storage
+      var totalPrice = localStorage.getItem("totalPrice");
+      document.getElementById("total_price_value").textContent = "$" + totalPrice;
+  </script>
+
+           <!-------------------------JavaScript for Toggle Menu------------------------->
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu()
+    {
+        navLinks.style.right = "0";
+    }
+    function hideMenu()
+    {
+        navLinks.style.right = "-200px";
+    }
+</script>
+<footer>
+  <div class="row">
+      <div class="col">
+          <img src="images/pngwing.com.png" class="logo">
+          <p>
+              Join us for their future! and witness the beauty of mother nature. 
+          </p>
+      </div>
+      <div class="col">
+          <h3>Office <div class="underline"><span></span> </div></h3>
+          <p>Galle Road</p>
+          <p>Galle, Sri Lanka</p>
+          <p>Southern Province, ID 0001331, Sri Lanka</p>
+          <p class="email-id">tutrlehatchery@gmail.com</p>
+          <h4>+94-0771238813</h4>
+      </div>
+      <div class="col">
+          <h3>Links <div class="underline"><span></span> </h3>
+          <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Features</a></li>
+              <li><a href="">Contacts</a></li>
+          </ul>
+      </div>
+      <div class="col">
+          <h3>Newsletter <div class="underline"><span></span> </h3>
+          <form class="form1">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+          <div class="social-icons">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-whatsapp"></i>
+              <i class="fab fa-instagram"></i>
+              
+          </div>
+      </div>
+  </div>
+  <hr>
+  <p class="copyright">The Sea Turtle Hatchery and Rescue Centre © 2023 - All Rights Reserved</p>
+
+</footer>
+
+    
+  </body>
+</html>

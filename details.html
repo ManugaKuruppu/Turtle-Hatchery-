@@ -1,0 +1,308 @@
+<html>
+  <head>
+    <meta name="viewport" content="device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turtle Hatcheries In Sri Lanka</title>
+    <link rel="stylesheet" href="details.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ee8e74c256.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    
+      <section class="header">
+        <nav>
+          <a href="website.html"><img src="Images/pngwing.com.png" /></a>
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="homePage.html">Home</a></li>
+                <li><a href="hikkaduwa.html">Hikkaduwa Turtle Hatchery</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+            </ul>
+          </div>
+          <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+      
+      
+
+        <title>Customer Information Form</title>
+        <style>
+            /* Add CSS styles for flags */
+            .flag-icon {
+                width: 20px;
+                height: auto;
+                vertical-align: middle;
+                margin-left: 5px;
+            }
+        </style>
+        <script>
+            function validateForm(event) {
+                event.preventDefault();
+                var fullName = document.forms["customerForm"]["fullname"].value;
+                var email = document.forms["customerForm"]["email"].value;
+                var confirmEmail = document.forms["customerForm"]["confirmEmail"].value;
+                var gender = document.forms["customerForm"]["gender"].value;
+                var countryCode = document.forms["customerForm"]["countryCode"].value;
+                var phoneNumber = document.forms["customerForm"]["phoneNumber"].value;
+                
+                // Validate full name (at least 3 characters)
+                if (fullName.length < 3) {
+                    alert("Full name must be at least 3 characters.");
+                    return false;
+                }
+                
+                // Validate email (simple check for @ symbol)
+                if (email.indexOf("@") === -1) {
+                    alert("Invalid email address.");
+                    return false;
+                }
+                
+                // Validate confirm email
+                if (email !== confirmEmail) {
+                    alert("Email addresses do not match.");
+                    return false;
+                }
+                
+                // Validate gender selection
+                if (gender === "") {
+                    alert("Please select a gender.");
+                    return false;
+                }
+                
+                // Validate phone number (numeric, at least 10 digits)
+                if (!/^\d{10,}$/.test(phoneNumber)) {
+                    alert("Invalid phone number.");
+                    return false;
+                }
+
+                // save details 
+                storageFunction();
+            }
+        </script>
+    
+    <div class="details">
+        <h1>Customer Information</h1>
+        <form name="customerForm" onsubmit="validateForm(event)">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="confirmEmail">Confirm Email:</label>
+            <input type="email" id="confirmEmail" name="confirmEmail" required><br><br>
+            
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br><br>
+            
+            <label for="phoneNumber">Phone Number:</label>
+            <div class="country-code-dropdown">
+                <select id="countryCode" name="countryCode">
+                    <option value="+1">United States (+1) <img class="flag-icon" src="Images/us.jpg" alt="US Flag"></option>
+                    <option value="+44">United Kingdom (+44) <img class="flag-icon" src="Images/uk.jpg" alt="UK Flag"></option>
+                    <option value="+91">India (+91) <img class="flag-icon" src="Images/" alt="India Flag"></option>
+                    <option value="+94">Sri Lanka (+94) <img class="flag-icon" src="Images/srilanka.jpg" alt="Sri Lanka Flag"></option>
+                    <option value="+62">Indonesia (+62) <img class="flag-icon" src="Images/" alt="Indonesia Flag"></option>
+                    <option value="+60">Malaysia (+60) <img class="flag-icon" src="Images/malaysia.jpg" alt="Malaysia Flag"></option>
+                    <option value="+65">Singapore (+65) <img class="flag-icon" src="Images/singapoor.jpg" alt="Singapore Flag"></option>
+                    <option value="+61">Australia (+61) <img class="flag-icon" src="Images/aus.jpg" alt="Australia Flag"></option>
+                    <option value="+7">Russia (+7) <img class="flag-icon" src="Images/russia.jpg" alt="Russia Flag"></option>
+                    <option value="+86">China (+86) <img class="flag-icon" src="Images/china.jpg" alt="China Flag"></option>
+                    <option value="+81">Japan (+81) <img class="flag-icon" src="Images/japan.jpg" alt="Japan Flag"></option>
+                    <option value="+55">Brazil (+55) <img class="flag-icon" src="Images/brazil.jpg" alt="Brazil Flag"></option>
+                    <option value="+971">UAE (+971) <img class="flag-icon" src="Images/uae.jpg" alt="UAE Flag"></option>
+                    <option value="+39">Italy (+39) <img class="flag-icon" src="Images/italy.jpg" alt="Italy Flag"></option>
+                    <!-- Add more country codes with flags here -->
+                </select>
+                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10,}" required>
+            </div>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+</div>
+    </section>
+    <!-------------------------JavaScript for Form and Local storage------------------------->
+
+<script type="text/javascript">
+    function storageFunction() 
+    {
+        // Get and store additional form fields in local storage
+        var fullName = document.getElementById("fullname").value;
+        localStorage.setItem("fullName", fullName);
+
+        var email = document.getElementById("email").value;
+        localStorage.setItem("email", email);
+
+        var confirmEmail = document.getElementById("confirmEmail").value;
+        localStorage.setItem("confirmEmail", confirmEmail);
+
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        localStorage.setItem("phoneNumber", phoneNumber);
+
+        var gender = document.getElementById("gender").value;
+        localStorage.setItem("gender",gender);
+
+        // Redirect to details.html after storing data in local storage
+        window.location.href = "payment.html";
+    }
+</script>
+        
+            <!-------------------------Summary Table------------------------->
+
+<div class="summary">
+    <h1>Summary Table</h1>
+    <table border="1">
+        <tr>
+            <th>Field</th>
+            <th>User Details</th>
+        </tr>
+        <tr>
+            <td>Date of Arrival</td>
+            <td id="arriving_date_value"></td>
+        </tr>
+        <tr>
+            <td>Time Duration Reserved</td>
+            <td id="stay_duration_value"></td>
+        </tr>
+        <tr>
+            <td>Time Slots Reserved</td>
+            <td id="time_slots_value"></td>
+        </tr>
+        <tr>
+            <td>Sri Lankan Adults</td>
+            <td id="sl_adults_value"></td>
+        </tr>
+        <tr>
+            <td>Sri Lankan Children</td>
+            <td id="sl_child_value"></td>
+        </tr>
+        <tr>
+            <td>Foreigner Adults</td>
+            <td id="fr_adults_value"></td>
+        </tr>
+        <tr>
+            <td>Foreigner Children</td>
+            <td id="fr_child_value"></td>
+        </tr>
+        <tr>
+            <td>Infants</td>
+            <td id="infant_value"></td>
+        </tr>
+        <tr>
+            <td>Total Price</td>
+            <td id="total_price_value"></td>
+        </tr>
+    </table>
+
+   
+
+<!-------------------------JavaScript for Summary Table------------------------->
+
+<script>
+    // Retrieve data from local storage and display in the table
+    document.getElementById("arriving_date_value").textContent = localStorage.getItem("arrivingDate");
+    document.getElementById("stay_duration_value").textContent = localStorage.getItem("stayDuration");
+    document.getElementById("time_slots_value").textContent = JSON.parse(localStorage.getItem("timeSlotArray")).join(", ");
+    document.getElementById("sl_adults_value").textContent = localStorage.getItem("SL Adults");
+    document.getElementById("sl_child_value").textContent = localStorage.getItem("SL Child");
+    document.getElementById("fr_adults_value").textContent = localStorage.getItem("Foreigner Adult");
+    document.getElementById("fr_child_value").textContent = localStorage.getItem("Foreigner Child");
+    document.getElementById("infant_value").textContent = localStorage.getItem("Infant");
+
+    // Display the total price from local storage
+    var totalPrice = localStorage.getItem("totalPrice");
+    document.getElementById("total_price_value").textContent = "$" + totalPrice;
+</script>
+        
+
+        <!-------------------------JavaScript for Toggle Menu------------------------->
+
+<script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu()
+    {
+        navLinks.style.right = "0";
+    }
+    function hideMenu()
+    {
+        navLinks.style.right = "-200px";
+    }
+</script>
+<script src="Tickets.js"></script>
+<footer>
+    <div class="row">
+        <div class="col">
+            <img src="images/pngwing.com.png" class="logo">
+            <p>
+                Join us for their future! and witness the beauty of mother nature. 
+            </p>
+        </div>
+        <div class="col">
+            <h3>Office <div class="underline"><span></span> </div></h3>
+            <p>Galle Road</p>
+            <p>Galle, Sri Lanka</p>
+            <p>Southern Province, ID 0001331, Sri Lanka</p>
+            <p class="email-id">tutrlehatchery@gmail.com</p>
+            <h4>+94-0771238813</h4>
+        </div>
+        <div class="col">
+            <h3>Links <div class="underline"><span></span> </h3>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Contacts</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Newsletter <div class="underline"><span></span> </h3>
+            <form class="form1">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+            <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-instagram"></i>
+                
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright">The Sea Turtle Hatchery and Rescue Centre © 2023 - All Rights Reserved</p>
+
+</footer>
+
+
+
+</body>
+</html>

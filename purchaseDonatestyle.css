@@ -1,0 +1,531 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Kaushan Script";
+    font-family: "Poppins", sans-serif;
+  }
+  #banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688),
+      url(Images/opportunity-to-volunteer-helping-baby-sea-turtles.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 150vh;
+    
+  }
+  .logo {
+    width: 200px;
+    position: top right;
+    top: 20%;
+    left: 25%;
+  }
+  nav {
+    display: flex;
+    padding: 0% 6%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav img {
+    width: 90px;
+    margin-top: 20px;
+    
+    
+    
+  }
+  
+  .nav-links {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+  }
+  
+  .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  
+  .nav-links ul li:hover::after {
+    width: 100%;
+  }
+  
+  nav .fa{
+    display: none;
+  }
+
+  .title h1{
+    text-align: center;
+    color: #ffffff;
+    padding-top: 120px;
+    font-size: 55px;
+    font-family: "Kaushan Script", cursive;
+  }
+
+   content h3{
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+  .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+  }
+  .content{
+    width: 20%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    transition: 0.4s;
+    background: #f2f2f2;
+  }
+
+  .content:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translate(0px, -8px);
+  }
+  
+   .content img{
+    width: 230px;
+    height: 200px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    border-radius: 20px;
+  }
+
+  p{
+    text-align: center;
+    color: #b2bec3;
+    padding-top: 0 8px;
+  }
+  
+  h6{
+    font-size: 26px;
+    text-align: center;
+    color: #222f3e;
+    margin: 0;
+  }
+   .card  ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+   .card  li{
+    padding: 5px;
+  }
+  .fa{
+    font-size: 26px;
+    transition: .4s;
+    
+  }
+
+  .checked{
+    color: #ff9f43;
+  }
+
+  .fa:hover{
+    transform: scale(1.3);
+    transition: .6s;
+  }
+  button{
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .back{
+    background: #009688;
+  }
+  .buy-1{
+    background: #2183a2;
+  }
+  .form
+{
+    min-height:120vh;
+    width:100%;
+    background: #009688;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.text-box
+{
+    display: table;
+    width: 90%;
+    margin: 10px auto ;
+    background: black;
+    padding: 12px 0;
+    color:#fff;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 30px;
+    color:#fff ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    opacity: 75%;
+}
+.text-box h1
+{
+    font-size: 65px; 
+    padding-bottom: 2%;
+    border-bottom:solid 1px #fff;
+}
+form input{
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+  border: antiquewhite;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 20px;
+}
+form
+{
+    text-align: left;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+input
+{
+    width: 70%;
+    height: 30px;
+}
+.text-box p
+{
+    margin: 10px 0 40px;
+    font-size:  20px;
+    color: #fff;
+    line-height: 30px;
+}
+.donate-btn
+{
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 30px;
+    color: #fff;
+    border: 1px solid #fff ;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.donate-btn:hover
+{
+    border: 1px solid #9EA2A5;
+    background:#9EA2A5;
+    transition:1s;
+}
+@media(max-width:700px)
+
+
+{
+  form
+{
+    text-align: left;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+    .text-box h1
+    {
+        font-size: 20px;
+    }
+    .text-box p
+    {
+        margin: 10px 0 40px;
+        font-size:  14px;
+        line-height: 20px;
+    }
+    .donate-btn
+    {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+}
+  
+  @media(max-width:1000px){
+    .content{
+        width: 45%;
+    }
+  }
+
+  @media(max-width:750px){
+    .content{
+        width: 100%;
+    }
+  }
+
+  
+
+
+  @media(max-width: 700px) {
+
+    #banner {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), #009688),
+        url(Images/back.jpg);
+      background-size: cover;
+      background-position: center;
+      min-height: 200vh;
+    }
+    #banner {
+      min-height: 350vh;
+    }
+  
+  
+    .nav-links ul li {
+     display: block;
+    }
+    .nav-links {
+      position: absolute;
+      background: #009688;
+      height: 100vh;
+      width: 250px;
+      top: 0;
+      right: -250px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+      
+    }
+    nav .fa{
+      display: block;
+      color: #fff;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+  
+    }
+    .nav-links ul{
+      padding: 50px;
+    }
+    #feature{
+      min-height: 190vh;
+    }
+    .title  h1 {
+      padding: 5%;
+      text-align: center;
+      color: #ffffff;
+      padding-top: 120px;
+      font-size: 25px;
+      font-family: "Kaushan Script", cursive;
+    }
+}
+footer{
+  width: 100%;
+  position: relative;
+  bottom: 0 ;
+  background: linear-gradient(to right, #000000d3, #009688);
+  color: #fff;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  border-top-right-radius: 125px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.row{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+}
+
+.col{
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.col:nth-child(2), .col:nth-child(3){
+  flex-basis: 15%;
+}
+
+.logo{
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+.col h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.email-id{
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+ul li{
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+form{
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+form .far{
+  font-size: 18px;
+  margin-right: 10px;
+
+}
+
+.form1 input{
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+  border: antiquewhite;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 20px;
+}
+
+form button{
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+form button .fas{
+  font-size: 16px;
+  color: #ccc;
+}
+
+.social-icons .fab{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.social-icons{
+  justify-content: center;
+    display: flex;
+}
+
+hr{
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;  
+}
+
+.copyright{
+  text-align: center;
+}
+
+.underline{
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+
+.underline span{
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+body {
+  background: #009688;
+}
+
+@keyframes moving{
+  0%{
+    left: -20px;
+  }
+  100%{
+    left:100%;
+  }
+}
+
+@media (max-width: 700px){
+  footer{
+    bottom: unset;
+  }
+  .col{
+    flex-basis: 100%;
+  
+  }
+  
+  .col:nth-child(2), .col:nth-child(3){
+    flex-basis: 100%;
+  }
+  body {
+    background: #009688;
+  }
+}

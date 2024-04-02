@@ -1,0 +1,507 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Kaushan Script";
+    font-family: "Poppins", sans-serif;
+  }
+  #banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #009688),
+      url(Images/back.jpg);
+    background-size: cover;
+    background-position: center;
+    
+  }
+  .logo {
+    width: 200px;
+    position: top right;
+    top: 20%;
+    left: 25%;
+  }
+  nav {
+    display: flex;
+    padding: 0% 6%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav img {
+    width: 90px;
+    margin-top: 20px;
+    
+    
+    
+  }
+  
+  .nav-links {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+  }
+  
+  .nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+  }
+  
+  .nav-links ul li:hover::after {
+    width: 100%;
+  }
+  
+  nav .fa{
+    display: none;
+  }
+
+  .title h1 {
+    text-align: center;
+    color: #ffffff;
+    padding-top: 120px;
+    font-size: 55px;
+    font-family: "Kaushan Script", cursive;
+  }
+  
+  .title-para p {
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+  }
+
+
+
+  .title2 h1{
+    text-align: center;
+    color: #ffffff;
+    padding-top: 70px;
+    font-size: 55px;
+    font-family: "Kaushan Script", cursive;
+  }
+
+  .species{
+    background: #009688
+  }
+  .species{
+    height: 330vh;
+  }
+
+  .sptitle{
+    text-align: center;
+    color: #ffffff;
+    padding-top: 50px;
+    font-size: 40px;
+    
+  }
+
+  .turtle1 img{
+    width: 550px;
+    height: 40vh;
+    display: flex;
+    padding: 20px;
+    margin-left: 35%;
+    border-radius: 60px;
+  }
+  
+
+  .sp-para{
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+  }
+
+  .turtle2 img{
+    width: 570px;
+    height: 40vh;
+    display: flex;
+    padding: 20px;
+    margin-left: 34%;
+    border-radius: 60px;
+  }
+
+  .turtle3 img{
+    width: 570px;
+    height: 40vh;
+    display: flex;
+    padding: 20px;
+    margin-left: 34%;
+    border-radius: 60px;
+  }
+
+  .turtle4 img{
+    width: 570px;
+    height: 40vh;
+    display: flex;
+    padding: 20px;
+    margin-left: 34%;
+    border-radius: 60px;
+  }
+
+  .tickets-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #009688;
+  }
+  
+  .boxes3 {
+    max-width: 1000px;
+    padding: 30px;
+    background-color: #ADEDCC;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card h1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .card p {
+    font-size: 23px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .book-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .book-btn:hover {
+    background-color: #0056b3;
+  }
+
+
+  @media(max-width: 700px) {
+
+    #banner {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), #009688),
+        url(Images/back.jpg);
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+    #banner {
+      min-height: 170vh;
+    }
+  
+  
+    .nav-links ul li {
+     display: block;
+    }
+    .nav-links {
+      position: absolute;
+      background: #009688;
+      height: 100vh;
+      width: 250px;
+      top: 0;
+      right: -250px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+      
+    }
+    nav .fa{
+      display: block;
+      color: #fff;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+  
+    }
+    .nav-links ul{
+      padding: 50px;
+    }
+    #feature{
+      min-height: 190vh;
+    }
+
+    .title  h1 {
+      text-align: center;
+      color: #ffffff;
+      padding-top: 120px;
+      font-size: 25px;
+      font-family: "Kaushan Script", cursive;
+    }
+  
+    .title-para p{
+      text-align: center;
+      font-size: 15px;
+      padding: 30px;
+    }
+
+    .title2 h1{
+      text-align: center;
+      color: #ffffff;
+      padding-top: 120px;
+      font-size: 25px;
+      font-family: "Kaushan Script", cursive;
+    }
+
+    .species{
+      background: #009688
+      
+    }
+    .species{
+      min-height: 500vh;
+    }
+  
+    .sptitle{
+      text-align: center;
+      color: #ffffff;
+      padding-top: 50px;
+      font-size: 25px;
+      
+    }
+  
+    .turtle1 img{
+      width: 310px;
+      height: 40vh;
+      display: flex;
+      padding: 20px;
+      margin-left: 7%;
+      border-radius: 60px;
+    }
+  
+    .sp-para{
+      text-align: center;
+      font-size: 15px;
+      padding: 30px;
+    }
+
+    .turtle2 img{
+      width: 320px;
+      height: 40vh;
+      display: flex;
+      padding: 20px;
+      margin-left: 5%;
+      border-radius: 60px;
+    }
+
+    .turtle3 img{
+      width: 325px;
+      height: 30vh;
+      display: flex;
+      padding: 20px;
+      margin-left: 5%;
+      border-radius: 60px;
+    }
+
+    .turtle4 img{
+      width: 325px;
+      height: 30vh;
+      display: flex;
+      padding: 20px;
+      margin-left: 5%;
+      border-radius: 60px;
+    }
+    
+}
+footer{
+  width: 100%;
+  position: relative;
+  bottom: 0 ;
+  background: linear-gradient(to right, #000000d3, #009688);
+  color: #fff;
+  padding: 100px 0 30px;
+  border-top-left-radius: 125px;
+  border-top-right-radius: 125px;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.row{
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+}
+
+.col{
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.col:nth-child(2), .col:nth-child(3){
+  flex-basis: 15%;
+}
+
+.logo{
+  width: 80px;
+  margin-bottom: 30px;
+}
+
+.col h3{
+  width: fit-content;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.email-id{
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+ul li{
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+
+form{
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+
+form .far{
+  font-size: 18px;
+  margin-right: 10px;
+
+}
+
+form input{
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+
+form button{
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+form button .fas{
+  font-size: 16px;
+  color: #ccc;
+}
+
+.social-icons .fab{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #000;
+  background: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.social-icons{
+  justify-content: center;
+    display: flex;
+}
+
+
+hr{
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;  
+}
+
+.copyright{
+  text-align: center;
+}
+
+.underline{
+  width: 100%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  overflow: hidden;
+}
+
+.underline span{
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+}
+body {
+  background: #009688;
+}
+
+@keyframes moving{
+  0%{
+    left: -20px;
+  }
+  100%{
+    left:100%;
+  }
+}
+
+@media (max-width: 700px){
+  footer{
+    bottom: unset;
+  }
+  .col{
+    flex-basis: 100%;
+  
+  }
+  
+  .col:nth-child(2), .col:nth-child(3){
+    flex-basis: 100%;
+  }
+  body {
+    background: #009688;
+  }
+
+  
+}
